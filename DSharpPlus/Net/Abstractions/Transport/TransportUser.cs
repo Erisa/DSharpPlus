@@ -33,6 +33,9 @@ namespace DSharpPlus.Net.Abstractions
         [JsonProperty("username", NullValueHandling = NullValueHandling.Ignore)]
         public string Username { get; internal set; }
 
+        [JsonProperty("global_name", NullValueHandling = NullValueHandling.Ignore)]
+        public string GlobalName { get; internal set; }
+
         [JsonProperty("discriminator", NullValueHandling = NullValueHandling.Ignore)]
         internal string Discriminator { get; set; }
 
