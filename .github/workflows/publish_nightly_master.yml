@@ -39,8 +39,3 @@ jobs:
       - name: Publish nightly NuGet packages
         if: ${{ github.event_name == 'push' }} # Ensure we don't push nightlies to the nuget feed on PRs.
         run: "dotnet nuget push \"build/*\" -k ${{ secrets.NUGET_ORG_API_KEY }} -s https://www.myget.org/F/erisa/api/v3/index.json" # If the package version does not comply with SemVer, it will be set as a pre-release version automatically.
-      - name: Export latest tag
-        if: ${{ github.event_name == 'push' }} # Only update channel topic when a PR is merged
-        run: echo LATEST_STABLE_VERSION=$(git describe --tags $(git rev-list --tags --max-count=1)) >> $GITHUB_ENV
-      - name: Update Discord channel topic
-        if: ${{ github.event_name == 'push' }} # Only update channel topic when a PR is merged
