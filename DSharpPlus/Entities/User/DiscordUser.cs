@@ -53,7 +53,6 @@ namespace DSharpPlus.Entities
             this.Locale = transport.Locale;
             this.Flags = transport.Flags;
             this.OAuthFlags = transport.OAuthFlags;
-            this.GlobalName = transport.GlobalName;
         }
 
         /// <summary>
@@ -61,9 +60,6 @@ namespace DSharpPlus.Entities
         /// </summary>
         [JsonProperty("username", NullValueHandling = NullValueHandling.Ignore)]
         public virtual string Username { get; internal set; }
-
-        [JsonProperty("global_name", NullValueHandling = NullValueHandling.Ignore)]
-        public virtual string GlobalName { get; internal set; }
 
         /// <summary>
         /// Gets the user's 4-digit discriminator.
