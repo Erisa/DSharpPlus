@@ -87,7 +87,6 @@ namespace DSharpPlus.Net.Abstractions
             this.Locale = other.Locale;
             this.Flags = other.Flags;
             this.OAuthFlags = other.OAuthFlags;
-            this.GlobalName = other.GlobalName;
         }
     }
 }
