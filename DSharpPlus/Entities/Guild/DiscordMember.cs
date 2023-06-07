@@ -94,7 +94,7 @@ namespace DSharpPlus.Entities
         /// Gets this member's display name.
         /// </summary>
         [JsonIgnore]
-        public string DisplayName => this.Nickname ?? this.Username;
+        public string DisplayName => this.Nickname ?? this.GlobalName ?? this.Username;
 
         /// <summary>
         /// How long this member's communication will be suppressed for.
