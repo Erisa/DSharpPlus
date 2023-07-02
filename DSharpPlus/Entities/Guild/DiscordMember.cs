@@ -329,7 +329,6 @@ namespace DSharpPlus.Entities
         /// <summary>
         /// Gets the member's global display name.
         /// </summary>
-
         [JsonIgnore]
         public override string? GlobalName
         {
